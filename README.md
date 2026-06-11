@@ -15,10 +15,6 @@ The board contains numbers from 1 to 15 and one empty space. The goal is to arra
 - S → Down
 - D → Right
 
-# Number Shifting Game
-
-A classic 4×4 number shifting puzzle game built in C.
-
 ## Gameplay
 
 ### Start Screen
