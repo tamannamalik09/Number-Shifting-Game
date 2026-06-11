@@ -49,11 +49,34 @@ int checkWin(int matrix[4][4]) // to check if our current situation match to win
 } 
 int main()
 {
-    int matrix[4][4] = {
-        {1 ,2 ,3 ,4},
-        {5 ,6 ,7 ,8},
+    printf("================================\n");
+    printf("      NUMBER SHIFTING GAME      \n");
+    printf("================================\n");
+    printf("\nRules Of This Game\n");
+    printf("\n1.You can move only 1 step at a time.\n");
+    printf("Move Up   : Press w\n");
+    printf("Move Down : Press s\n");
+    printf("Move Left : Press a\n");
+    printf("Move Right: Press d\n");
+    printf("\n2.You can move number at empty position only.\n");
+    printf("\n3.Wining situation: Number in a 4*4 matrix should be in order from 1 to 15.\n");
+    printf("|  1 |  2 |  3 |  4 |\n");
+    printf("|  5 |  6 |  7 |  8 |\n");
+    printf("|  9 | 10 | 11 | 12 |\n");
+    printf("| 13 | 14 | 15 |    |\n");
+    printf("\nPress any key to start the game\n");
+    getch();
+    int win[4][4] = {
+        {1  ,2  ,3  ,4},
+        {5  ,6  ,7  ,8},
         {9 ,10 ,11 ,12},
         {13 ,14 ,15 ,0}
+    };
+    int matrix[4][4] = {
+        {6 ,13 ,7 ,10},
+        {8 ,9 ,11 ,0 },
+        {15 ,2 ,12 ,5},
+        {14 ,3 ,1 ,4 }
     };
     while(1)
     {
@@ -117,7 +140,7 @@ int main()
         }
         if(checkWin(matrix))
         {   
-            printMatrix(matrix);
+            printMatrix(win);
             printf("You Won!\n");
             break;
         }
